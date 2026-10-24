@@ -1,0 +1,39 @@
+erDiagram
+    USERS ||--o{ AUDIT : writes
+    EQUIPMENT ||--o{ AUDIT : records
+    USERS ||--o{ LOANS : issues
+    EQUIPMENT ||--o{ LOANS : assigned
+    USERS {
+      integer id PK
+      text username UK
+      text password
+      text role
+    }
+    EQUIPMENT {
+      integer id PK
+      text code UK
+      text name
+      text category
+      text location
+      text serial
+      text status
+      text notes
+    }
+    AUDIT {
+      integer id PK
+      integer equipment_id FK
+      integer user_id FK
+      text action
+      text detail
+      text created_at
+    }
+    LOANS {
+      integer id PK
+      integer equipment_id FK
+      integer issued_by FK
+      text borrower
+      text issued_at
+      text due_at
+      text returned_at
+      text return_condition
+    }

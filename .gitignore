@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+.pytest_cache/
+.coverage
+
+# Local environments
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Editors / operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Frontend dependencies and build output (if added later)
+node_modules/
+dist/
+build/
+
+# Local SQLite database
+app/data/*.db

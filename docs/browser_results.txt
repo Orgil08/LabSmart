@@ -1,0 +1,4 @@
+Browser end-to-end: NOT COMPLETED. Local browser binary unavailable; cloud browser did not connect to localhost.
+JavaScript syntax: PASS (node --check).
+API integration: 10 tests PASS; see test_results.txt.
+Manual UI walkthrough: see README_MN.md.

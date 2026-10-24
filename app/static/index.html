@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LabSmart — лабораторийн төхөөрөмжөө олох, QR-аар авах, буцаах, засвар болон ирээдүйн хэрэгцээг хянах систем.">
+  <meta name="theme-color" content="#071426">
+  <title>LabSmart · Лабораторийн төхөөрөмжийн ухаалаг удирдлага</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Үндсэн хэсэг рүү алгасах</a>
+
+  <!-- PUBLIC / AUTH -->
+  <section id="welcomeView" class="welcome-view">
+    <header class="public-nav container">
+      <a class="brand-lockup" href="#" data-public-home aria-label="LabSmart нүүр хуудас">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span><strong>LabSmart</strong><small>Лабораторийн ухаалаг удирдлага</small></span>
+      </a>
+      <nav class="public-actions" aria-label="Нүүр хуудасны цэс">
+        <button class="ghost-button" data-public-catalog>Төхөөрөмжүүдийг харах</button>
+        <button class="primary-button" data-show-login>Нэвтрэх</button>
+      </nav>
+    </header>
+
+    <main class="welcome-hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">LABORATORY · EQUIPMENT · SMART PLANNING</span>
+        <h1>Лабораторийн төхөөрөмжөө<br><span>хялбар удирдаарай.</span></h1>
+        <p>Төхөөрөмжөө хурдан олох, QR кодоор авах, буцаах болон ирээдүйд ямар төхөөрөмж хэрэг болохыг урьдчилан харах боломжтой.</p>
+        <div class="hero-actions">
+          <button class="primary-button large" data-public-catalog>Төхөөрөмжүүдийг харах <span>→</span></button>
+          <button class="ghost-button large" data-show-login>Нэвтрэх</button>
+          <button class="text-link" data-open-register>Бүртгүүлэх</button>
+        </div>
+        <div class="trust-row">
+          <span>✓ Хялбар хайлт</span>
+          <span>✓ QR авах / буцаах</span>
+          <span>✓ Ирээдүйн хэрэгцээ</span>
+        </div>
+      </div>
+      <div class="hero-preview" aria-label="LabSmart системийн товч танилцуулга">
+        <div class="preview-window">
+          <div class="preview-top"><span></span><span></span><span></span><strong>LabSmart</strong></div>
+          <div class="preview-body">
+            <div class="preview-sidebar"><span class="active"></span><span></span><span></span><span></span><span></span></div>
+            <div class="preview-content">
+              <div class="mini-heading"><div><small>ӨНӨӨДРИЙН БАЙДАЛ</small><b>Сайн байна уу 👋</b></div><span>●</span></div>
+              <div class="mini-stats"><div><small>Нийт</small><b id="publicTotal">—</b></div><div><small>Боломжтой</small><b id="publicAvailable">—</b></div><div><small>Ашиглаж байна</small><b id="publicInUse">—</b></div></div>
+              <div class="mini-chart"><div class="mini-chart-head"><span>Төхөөрөмжийн ашиглалт</span><span>7 хоног</span></div><div class="bars"><i style="height:35%"></i><i style="height:55%"></i><i style="height:46%"></i><i style="height:72%"></i><i style="height:61%"></i><i style="height:84%"></i><i style="height:67%"></i></div></div>
+              <div class="mini-demand"><span class="mini-icon">↗</span><div><b>Ирэх 7 хоног</b><small>Төхөөрөмжийн хэрэгцээний төлөв</small></div><strong>+18%</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="feature-strip container" aria-labelledby="whyLabSmart">
+      <div class="section-heading"><span class="eyebrow">ЯАГААД LABSMART?</span><h2 id="whyLabSmart">Өдөр тутмын ажлыг илүү энгийн болгоно.</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">⌕</div><h3>Төхөөрөмжөө олох</h3><p>Хэрэгтэй төхөөрөмжөө нэр, ангилал, байршлаар хурдан хайж олоорой.</p></article>
+        <article class="feature-card"><div class="feature-icon">▣</div><h3>QR кодоор авах</h3><p>Төхөөрөмж авах, буцаах үйлдлийг хэдхэн алхмаар хурдан хийгээрэй.</p></article>
+        <article class="feature-card"><div class="feature-icon">↗</div><h3>Хэрэгцээг урьдчилан харах</h3><p>Ирэх өдрүүдэд ямар төхөөрөмж илүү хэрэг болохыг ойлгомжтойгоор хараарай.</p></article>
+        <article class="feature-card"><div class="feature-icon">⌂</div><h3>Засвар үйлчилгээ</h3><p>Төхөөрөмжийн төлөв, засвар болон ашиглалтын мэдээллийг нэг дор хянаарай.</p></article>
+      </div>
+    </section>
+  </section>
+
+  <section id="authView" class="auth-view" hidden>
+    <div class="auth-shell">
+      <div class="auth-brand-pane">
+        <button class="back-link" data-show-welcome>← Нүүр хуудас</button>
+        <div class="auth-brand-copy"><span class="brand-mark large-mark">L</span><div><strong>LabSmart</strong><small>Лабораторийн ухаалаг удирдлага</small></div></div>
+        <div class="auth-value"><span class="eyebrow">ХУРД · ОЙЛГОМЖ · ХЯНАЛТ</span><h1>Төхөөрөмжийн ажлаа<br><span>нэг дороос.</span></h1><p>Оюутан, багш, лабораторийн ажилтан, админ бүгдэд ойлгомжтой ажлын орчин.</p></div>
+        <div class="auth-quote">“Төхөөрөмжөө олоод, QR-аар аваад, буцаах хугацаагаа марталгүй хянаарай.”</div>
+      </div>
+      <div class="auth-panel">
+        <div class="auth-panel-head">
+          <span class="eyebrow" id="authEyebrow">ТАВТАЙ МОРИЛ</span>
+          <h2 id="authTitle">Нэвтрэх</h2>
+          <p id="authSubtitle">Бүртгэлтэй мэдээллээрээ нэвтэрнэ үү.</p>
+        </div>
+
+        <form id="loginForm" class="stack-form">
+          <label>И-мэйл эсвэл хэрэглэгчийн нэр<input name="email" required autocomplete="username" placeholder="you@example.com"></label>
+          <label>Нууц үг<div class="password-field"><input id="loginPassword" name="password" type="password" required autocomplete="current-password" placeholder="••••••••"><button type="button" class="input-action" data-toggle-password="loginPassword" aria-label="Нууц үгийг харах">◉</button></div></label>
+          <div class="form-row between"><button class="text-link small" type="button" data-forgot-password>Нууц үгээ мартсан?</button><span id="loginRate" class="helper"></span></div>
+          <p id="loginError" class="form-error" role="alert"></p>
+          <button id="loginSubmit" class="primary-button large" type="submit"><span class="button-label">Нэвтрэх</span><span class="button-spinner" hidden></span></button>
+          <div class="auth-switch">Шинэ хэрэглэгч үү? <button type="button" class="text-link" data-open-register>Бүртгэл үүсгэх</button></div>
+          <p id="loginNotice" class="form-success" role="status"></p>
+        </form>
+
+        <form id="registerForm" class="stack-form" hidden>
+          <div class="form-grid-2">
+            <label>Овог<input name="last_name" required autocomplete="family-name" placeholder="Бат"></label>
+            <label>Нэр<input name="first_name" required autocomplete="given-name" placeholder="Бат-Эрдэнэ"></label>
+          </div>
+          <label>И-мэйл<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+          <label>Нууц үг<div class="password-field"><input id="registerPassword" name="password" type="password" required minlength="8" maxlength="128" autocomplete="new-password" placeholder="Хамгийн багадаа 8 тэмдэгт"><button type="button" class="input-action" data-toggle-password="registerPassword" aria-label="Нууц үгийг харах">◉</button></div></label>
+          <div class="strength-meter" aria-live="polite"><div><span id="strengthBar"></span></div><strong id="strengthLabel">Нууц үгийн хүчийг шалгаж байна</strong></div>
+          <label>Нууц үг давтах<input name="confirm" type="password" required minlength="8" maxlength="128" autocomplete="new-password" placeholder="Нууц үгээ дахин оруулна уу"></label>
+          <label>Хэрэглэгчийн төрөл<select name="user_type"><option value="student">Оюутан</option><option value="staff">Багш / Лабораторийн ажилтан</option></select></label>
+          <label>Байгууллага / лабораторийн нэр<input name="organization" required autocomplete="organization" placeholder="МУИС · Лаборатори"></label>
+          <p id="registerError" class="form-error" role="alert"></p>
+          <button id="registerSubmit" class="primary-button large" type="submit"><span class="button-label">Бүртгэл үүсгэх</span><span class="button-spinner" hidden></span></button>
+          <div class="auth-switch">Бүртгэлтэй юу? <button type="button" class="text-link" data-show-login>Нэвтрэх</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <div id="appView" class="app-shell" hidden>
+    <aside id="sidebar" class="sidebar" aria-label="Үндсэн цэс">
+      <div class="sidebar-head"><a class="brand-lockup compact" href="#dashboard" data-nav="dashboard" aria-label="LabSmart dashboard"><span class="brand-mark">L</span><span><strong>LabSmart</strong><small>Smart laboratory</small></span></a><button class="icon-button mobile-only" data-close-sidebar aria-label="Цэс хаах">×</button></div>
+      <div class="sidebar-scroll">
+        <nav id="mainNav" class="main-nav">
+          <span class="nav-label">ҮНДСЭН</span>
+          <button class="nav-item active" data-nav="dashboard"><span class="nav-icon">⌂</span><span>Dashboard</span></button>
+          <button class="nav-item" data-nav="equipment"><span class="nav-icon">▦</span><span>Төхөөрөмжүүд</span></button>
+          <button class="nav-item" data-nav="qr"><span class="nav-icon">▣</span><span>QR авах / буцаах</span></button>
+          <button class="nav-item" data-nav="myloans"><span class="nav-icon">◷</span><span>Миний төхөөрөмжүүд</span></button>
+          <button class="nav-item role-request" data-nav="requests"><span class="nav-icon">✓</span><span>Төхөөрөмжийн хүсэлт</span></button>
+          <button class="nav-item role-request" data-nav="schedule"><span class="nav-icon">□</span><span>Хичээлийн хуваарь</span></button>
+          <span class="nav-label professional-nav">МЭРГЭЖЛИЙН ХЯНАЛТ</span>
+          <button class="nav-item role-professional" data-nav="demand"><span class="nav-icon">↗</span><span>Ирээдүйн хэрэгцээ</span></button>
+          <button class="nav-item role-professional" data-nav="recommendations"><span class="nav-icon">✦</span><span>Ухаалаг зөвлөмж</span></button>
+          <button class="nav-item role-professional" data-nav="reports"><span class="nav-icon">▤</span><span>Ашиглалт & тайлан</span></button>
+          <button class="nav-item role-professional" data-nav="operations"><span class="nav-icon">⌁</span><span>Аудит ба засвар</span></button>
+          <span class="nav-label admin-nav">УДИРДЛАГА</span>
+          <button class="nav-item role-admin admin-nav" data-nav="users"><span class="nav-icon">◎</span><span>Хэрэглэгчид</span></button>
+          <button class="nav-item role-admin admin-nav" data-nav="settings"><span class="nav-icon">⚙</span><span>Тохиргоо</span></button>
+        </nav>
+      </div>
+      <div class="sidebar-foot">
+        <button class="profile-mini" data-nav="profile"><span id="avatarInitials" class="avatar">L</span><span><strong id="userName">LabSmart</strong><small id="userRole">Оюутан</small></span><span class="chevron">›</span></button>
+        <button class="logout-button" id="logout"><span>↪</span> Гарах</button>
+      </div>
+    </aside>
+    <div id="sidebarBackdrop" class="sidebar-backdrop" data-close-sidebar></div>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button mobile-only" data-open-sidebar aria-label="Цэс нээх">☰</button><div id="breadcrumb" class="breadcrumb">Dashboard</div></div>
+        <div class="topbar-actions">
+          <button class="notification-button" data-nav="notifications" aria-label="Мэдэгдлүүд"><span>♢</span><i id="notificationCount" hidden>0</i></button>
+          <button class="top-avatar" data-nav="profile" id="topAvatar">L</button>
+        </div>
+      </header>
+
+      <main id="mainContent" class="content" tabindex="-1">
+        <!-- Dashboard -->
+        <section class="page" data-page="dashboard">
+          <div class="page-head welcome-head"><div><span class="eyebrow">ӨНӨӨДРИЙН ТӨЛӨВ</span><h1>Сайн байна уу, <span id="greetingName">LabSmart</span> 👋</h1><p>Лабораторийн төхөөрөмжийн өнөөдрийн байдлыг эндээс хараарай.</p></div><div class="head-actions"><button class="secondary-button" data-nav="equipment">Төхөөрөмж хайх</button><button class="primary-button" data-nav="qr">QR ашиглах</button></div></div>
+          <div class="kpi-grid" id="dashboardKpis"></div>
+          <div class="dashboard-grid">
+            <article class="panel chart-panel wide"><div class="panel-head"><div><h2>Төхөөрөмжийн ашиглалт</h2><p>Сүүлийн 7 хоногт хийсэн олголтын хөдөлгөөн</p></div><span class="panel-badge">7 хоног</span></div><div id="utilizationChart" class="chart-area"></div></article>
+            <article class="panel chart-panel"><div class="panel-head"><div><h2>Төхөөрөмжийн төлөв</h2><p>Одоогийн бодит бүртгэл</p></div></div><div id="statusChart" class="donut-area"></div></article>
+          </div>
+          <div class="dashboard-grid secondary-grid professional-data">
+            <article class="panel"><div class="panel-head"><div><h2>Ирэх 7 хоногийн хэрэгцээ</h2><p>Төлөвлөсөн session ба өмнөх мэдээлэлд тулгуурласан төлөв</p></div><button class="text-link" data-nav="demand">Бүгдийг харах →</button></div><div id="dashboardDemand" class="demand-list"></div></article>
+            <article class="panel"><div class="panel-head"><div><h2>Сүүлийн үйлдлүүд</h2><p>Систем дээр хийгдсэн шинэ өөрчлөлтүүд</p></div><button class="text-link" data-nav="operations">Бүгдийг харах →</button></div><div id="recentActivities" class="activity-list"></div></article>
+          </div>
+          <div class="dashboard-grid secondary-grid">
+            <article class="panel"><div class="panel-head"><div><h2>Анхаарах зүйлс</h2><p>Танд хамгийн түрүүнд харах шаардлагатай мэдээлэл.</p></div><button class="text-link" data-nav="notifications">Бүх мэдэгдэл →</button></div><div id="dashboardAlerts" class="alert-list"></div></article>
+            <article class="panel quick-actions"><div class="panel-head"><div><h2>Шуурхай үйлдэл</h2><p>Өдөр тутмын ажлыг хэдхэн товшилтоор.</p></div></div><div class="quick-action-grid"><button class="quick-action" data-nav="equipment"><span>▦</span><b>Төхөөрөмж олох</b><small>Нэр, ангилал, байршлаар</small></button><button class="quick-action" data-nav="qr"><span>▣</span><b>QR ашиглах</b><small>Авах эсвэл буцаах</small></button><button class="quick-action" data-nav="requests"><span>✓</span><b>Хүсэлтүүд</b><small>Шинэ хүсэлт гаргах</small></button><button class="quick-action professional-data" data-nav="demand"><span>↗</span><b>Хэрэгцээ харах</b><small>Ирэх 7 хоногийн төлөв</small></button></div></article>
+          </div>
+        </section>
+
+        <!-- Equipment -->
+        <section class="page" data-page="equipment" hidden>
+          <div class="page-head"><div><span class="eyebrow">ЛАБОРАТОРИЙН НӨӨЦ</span><h1>Төхөөрөмжүүд</h1><p>Лабораторид байгаа төхөөрөмжүүдийг эндээс хайж, хараад, авах боломжтой.</p></div><div class="head-actions"><button class="secondary-button" data-nav="qr">QR авах / буцаах</button><button id="addEquipment" class="primary-button role-admin">＋ Төхөөрөмж нэмэх</button></div></div>
+          <div id="equipmentSummary" class="mini-stat-strip"></div>
+          <section class="panel">
+            <div class="filter-bar"><div class="search-box"><span>⌕</span><input id="equipmentSearch" placeholder="Төхөөрөмж хайх..." aria-label="Төхөөрөмж хайх"></div><select id="equipmentCategory" aria-label="Ангилал"><option value="">Бүх ангилал</option></select><select id="equipmentLocation" aria-label="Байршил"><option value="">Бүх байршил</option></select><select id="equipmentStatus" aria-label="Төлөв"><option value="">Бүх төлөв</option><option value="available">Боломжтой</option><option value="in_use">Ашиглаж байна</option><option value="maintenance">Засварт</option><option value="damaged">Гэмтсэн</option><option value="lost">Алдагдсан</option><option value="retired">Идэвхгүй</option></select><button id="resetEquipmentFilters" class="icon-button" title="Шүүлтүүр цэвэрлэх" aria-label="Шүүлтүүр цэвэрлэх">↻</button></div>
+            <div class="table-wrap"><table><thead><tr><th>ТӨХӨӨРӨМЖ</th><th>ДУГААР</th><th>АНГИЛАЛ</th><th>ТОО</th><th>ТӨЛӨВ</th><th>БАЙРШИЛ</th><th></th></tr></thead><tbody id="equipmentRows"></tbody></table></div>
+            <div id="equipmentLoading" class="state-block" hidden><span class="spinner"></span><b>Мэдээлэл ачаалж байна...</b></div>
+            <div id="equipmentEmpty" class="state-block" hidden><div class="empty-icon">⌕</div><b>Одоогоор төхөөрөмж алга.</b><p>Хайлтын нөхцөлөө өөрчлөх эсвэл шинэ төхөөрөмж нэмнэ үү.</p><button class="secondary-button role-admin" data-add-equipment-inline>Төхөөрөмж нэмэх</button></div>
+            <div id="equipmentCount" class="table-footer"></div>
+          </section>
+        </section>
+
+        <!-- QR -->
+        <section class="page" data-page="qr" hidden>
+          <div class="page-head"><div><span class="eyebrow">ХУРДАН ҮЙЛДЭЛ</span><h1>QR ашиглан авах / буцаах</h1><p>Төхөөрөмжийн QR кодыг уншуулж, авах эсвэл буцаах үйлдлийг хурдан хийнэ.</p></div></div>
+          <div class="qr-layout">
+            <article class="panel qr-scanner-panel"><div class="panel-head"><div><h2 id="qrTitle">QR уншуулах</h2><p id="qrHint">Камер ашиглах эсвэл төхөөрөмжийн дугаарыг гараар оруулаарай.</p></div><span class="status-dot success">● Бэлэн</span></div><div class="scanner-frame" id="scannerFrame"><video id="qrVideo" playsinline muted hidden></video><div class="scanner-overlay"><span></span><span></span><span></span><span></span><small id="scannerMessage">Камер эхлүүлэхийг дарна уу</small></div></div><div class="scanner-actions"><button id="startCamera" class="primary-button">▣ Камер эхлүүлэх</button><button id="stopCamera" class="secondary-button" hidden>Камер зогсоох</button></div><div class="manual-scan"><span>эсвэл</span><label>Төхөөрөмжийн дугаар<input id="qrManualCode" placeholder="Жишээ: LAB-001" autocomplete="off"></label><button id="lookupQr" class="secondary-button">Төхөөрөмж шалгах</button></div></article>
+            <article class="panel qr-flow-panel"><div class="panel-head"><div><h2>Үйл явц</h2><p>Баталгаажуулалт бүрийг дарааллаар харуулна.</p></div></div><div class="flow-steps" id="qrSteps"><div class="flow-step active"><b>01</b><span>QR уншуулах</span></div><div class="flow-step"><b>02</b><span>Төхөөрөмж шалгах</span></div><div class="flow-step"><b>03</b><span>Баталгаажуулах</span></div><div class="flow-step"><b>04</b><span>Түүхэнд бүртгэх</span></div></div><div id="qrResult" class="qr-result state-block"><div class="empty-icon">▣</div><b>Төхөөрөмжөө сонгоно уу.</b><p>Төхөөрөмжийн дугаар оруулахад энд дэлгэрэнгүй мэдээлэл гарна.</p></div></article>
+          </div>
+        </section>
+
+        <!-- My loans -->
+        <section class="page" data-page="myloans" hidden>
+          <div class="page-head"><div><span class="eyebrow">МИНИЙ ХЭРЭГЛЭЭ</span><h1>Миний төхөөрөмжүүд</h1><p>Одоогоор ашиглаж байгаа төхөөрөмж болон буцаах хугацаагаа эндээс хянаарай.</p></div><button class="primary-button" data-nav="equipment">Төхөөрөмж хайх</button></div>
+          <div id="loanSummary" class="mini-stat-strip"></div>
+          <section class="panel"><div class="panel-head"><div><h2>Төхөөрөмжийн жагсаалт</h2><p>Аваад буцаагаагүй төхөөрөмжүүд хамгийн дээр харагдана.</p></div></div><div id="loansList" class="loan-list"></div></section>
+        </section>
+
+        <!-- Requests -->
+        <section class="page" data-page="requests" hidden>
+          <div class="page-head"><div><span class="eyebrow">ХҮСЭЛТ · БАТАЛГААЖУУЛАЛТ</span><h1>Төхөөрөмжийн хүсэлт</h1><p>Хичээлдээ хэрэгтэй төхөөрөмжөө урьдчилан хүсэж, баталгааны явцыг хянаарай.</p></div><button class="primary-button" data-open-request>＋ Хүсэлт гаргах</button></div>
+          <div class="request-summary" id="requestSummary"></div>
+          <section class="panel"><div class="panel-head"><div><h2>Хүсэлтүүд</h2><p>Оюутанд өөрийн хүсэлт, багш/ажилтанд шийдвэрлэх хүсэлтүүд харагдана.</p></div></div><div id="requestList" class="request-list"></div></section>
+        </section>
+
+        <!-- Schedule -->
+        <section class="page" data-page="schedule" hidden>
+          <div class="page-head"><div><span class="eyebrow">ХИЧЭЭЛИЙН ТӨЛӨВЛӨЛТ</span><h1>Хичээлийн хуваарь</h1><p>Ирэх лабораторийн session болон төхөөрөмжийн хэрэгцээг нэг дор харна.</p></div><button class="primary-button" data-nav="demand">Хэрэгцээг харах</button></div>
+          <section class="panel"><div class="panel-head"><div><h2>Ирэх session-ууд</h2><p>Огноо, хичээл, оюутны тоо болон багийн төлөвлөгөө.</p></div></div><div class="table-wrap"><table><thead><tr><th>ХИЧЭЭЛ</th><th>LAB</th><th>ЭХЛЭХ</th><th>ОЮУТАН</th><th>БАГ</th><th>ТӨЛӨВ</th></tr></thead><tbody id="scheduleRows"></tbody></table></div><div id="scheduleEmpty" class="state-block" hidden><div class="empty-icon">□</div><b>Одоогоор хуваарь байхгүй.</b></div></section>
+        </section>
+
+        <!-- Demand -->
+        <section class="page" data-page="demand" hidden>
+          <div class="page-head"><div><span class="eyebrow">ТӨЛӨВЛӨЛТ</span><h1>Ирээдүйн хэрэгцээ</h1><p>Өмнөх ашиглалтад үндэслэн ирэх өдрүүдэд ямар төхөөрөмж илүү хэрэг болохыг тооцоолж байна.</p></div><div class="head-actions"><button class="secondary-button" data-nav="schedule">Хуваарь</button><button class="secondary-button" data-run-ml>Таамгийг шинэчлэх</button><button class="primary-button" data-nav="recommendations">Зөвлөмж харах</button></div></div>
+          <div class="info-banner"><span class="banner-icon">↗</span><div><b>Энэ бол төлөвлөлтийн туслах мэдээлэл.</b><p>Таамгийг одоогийн нөөцтэй хамт харуулж, хомсдол үүсэхээс өмнө бэлтгэл хийхэд тусална.</p></div></div>
+          <div id="demandGrid" class="demand-grid"></div>
+          <section class="panel advanced-panel"><button class="advanced-toggle" data-toggle-advanced="demandAdvanced"><span>Нэмэлт мэдээлэл</span><b>＋</b></button><div id="demandAdvanced" class="advanced-content" hidden><div class="advanced-grid"><div><span>Таамаглалын итгэлцэл</span><b>Түүхийн хамрах хүрээ</b></div><div><span>Ашигласан мэдээлэл</span><b>Өмнөх session-ууд</b></div><div><span>Загвар</span><b id="modelUsedLabel">—</b></div><div><span>Хугацаа</span><b>Ирэх 7 хоног</b></div><div><span>Анхаарах</span><b>Итгэлцэл нь магадлал гэсэн утга биш.</b></div></div><div class="model-eval"><div class="panel-head compact"><div><h2>Загварын харьцуулалтын тойм</h2><p>Сүүлийн batch-ийн хугацааны дараалалтай шалгалтын үр дүн.</p></div></div><div class="table-wrap"><table><thead><tr><th>ЗАГВАР</th><th>TRAIN</th><th>TEST</th><th>MAE</th><th>RMSE</th><th>BIAS</th></tr></thead><tbody id="modelSummaryRows"></tbody></table></div></div></div></section>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="page" data-page="recommendations" hidden>
+          <div class="page-head"><div><span class="eyebrow">ШИЙДВЭР ГАРГАЛТ</span><h1>Ухаалаг зөвлөмж</h1><p>Юу болж байгаа, яагаад, цаашид юу хийхийг энгийн хэлээр тайлбарлана.</p></div></div>
+          <div id="recommendationList" class="recommendation-list"></div>
+        </section>
+
+        <!-- Reports -->
+        <section class="page" data-page="reports" hidden>
+          <div class="page-head"><div><span class="eyebrow">ТАЙЛАН</span><h1>Ашиглалт & тайлан</h1><p>Төхөөрөмжийн ашиглалт, буцаалт, засвар болон хэрэглээний тоймыг хараарай.</p></div><button id="exportReport" class="secondary-button">↓ Тайлан татах</button></div>
+          <div id="reportKpis" class="kpi-grid report-kpis"></div>
+          <div class="dashboard-grid secondary-grid"><article class="panel"><div class="panel-head"><div><h2>Хамгийн их ашиглагдсан</h2><p>Олголтын тоогоор</p></div></div><div id="topUsed" class="ranking-list"></div></article><article class="panel"><div class="panel-head"><div><h2>Хамгийн бага ашиглагдсан</h2><p>Нөөцийн дахин хуваарилалтыг шалгахад тусална</p></div></div><div id="lowUsed" class="ranking-list"></div></article></div>
+          <div class="dashboard-grid secondary-grid"><article class="panel"><div class="panel-head"><div><h2>Буцаалтын мэдээлэл</h2><p>Нээлттэй болон хугацаа хэтэрсэн олголт</p></div></div><div id="loanReport" class="table-list"></div></article><article class="panel"><div class="panel-head"><div><h2>Засварын мэдээлэл</h2><p>Сүүлийн засварын бүртгэл</p></div></div><div id="maintenanceReport" class="table-list"></div></article></div>
+          <section class="panel"><div class="panel-head"><div><h2>Хэрэглэгчийн ашиглалт</h2><p>Хэн хэдэн удаа төхөөрөмж ашигласны тойм.</p></div></div><div id="userUsageReport" class="ranking-list"></div></section>
+        </section>
+
+        <!-- Operations -->
+        <section class="page" data-page="operations" hidden>
+          <div class="page-head"><div><span class="eyebrow">НЭГДСЭН ХЯНАЛТ</span><h1>Аудит ба засвар</h1><p>Хэн, юу хийсэн болон ямар төхөөрөмж засварт байгааг ойлгомжтойгоор хянаарай.</p></div></div>
+          <div class="tab-list" role="tablist"><button class="tab active" data-tab="auditTab">Үйлдлийн түүх</button><button class="tab role-professional" data-tab="maintenanceTab">Засвар үйлчилгээ</button></div>
+          <div id="auditTab" class="tab-panel active"><section class="panel"><div class="panel-head"><div><h2>Сүүлийн үйлдлүүд</h2><p>Нэмэх, өөрчлөх, авах, буцаах зэрэг үйлдлийн түүх.</p></div></div><div id="auditList" class="audit-list"></div></section></div>
+          <div id="maintenanceTab" class="tab-panel" hidden><div class="panel-head standalone"><div><h2>Засвар үйлчилгээ</h2><p>Засвар шаардлагатай төхөөрөмжүүд болон ажлын явц.</p></div><button id="addMaintenance" class="primary-button role-professional">＋ Засвар бүртгэх</button></div><div class="dashboard-grid secondary-grid"><section class="panel"><div id="maintenanceList" class="maintenance-list"></div></section><section class="panel maintenance-form-panel" id="maintenanceFormPanel" hidden><div class="panel-head"><div><h2>Засварын бүртгэл</h2><p>Асуудал болон төлөвлөгөөний мэдээлэл.</p></div></div><form id="maintenanceForm" class="stack-form"><label>Төхөөрөмж<select name="equipment_id" id="maintenanceEquipment"></select></label><label>Асуудлын тайлбар<textarea name="issue" required maxlength="300" rows="4" placeholder="Ямар асуудал илэрсэн бэ?"></textarea></label><label>Эрэмбэ<select name="priority"><option value="medium">Дунд</option><option value="high">Өндөр</option><option value="critical">Яаралтай</option><option value="low">Бага</option></select></label><label>Төлөвлөсөн огноо<input name="scheduled_at" type="datetime-local"></label><p id="maintenanceError" class="form-error"></p><button class="primary-button" type="submit">Хадгалах</button></form></section></div></div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="page" data-page="notifications" hidden>
+          <div class="page-head"><div><span class="eyebrow">МЭДЭГДЭЛ</span><h1>Мэдэгдэл</h1><p>Хугацаа, нөөц болон ирээдүйн хэрэгцээтэй холбоотой анхааруулгууд.</p></div><button id="markAllRead" class="secondary-button">Бүгдийг уншсан</button></div>
+          <section class="panel"><div id="notificationList" class="notification-list"></div></section>
+        </section>
+
+        <!-- Users -->
+        <section class="page" data-page="users" hidden>
+          <div class="page-head"><div><span class="eyebrow">АДМИН УДИРДЛАГА</span><h1>Хэрэглэгчид</h1><p>Систем ашиглаж буй хэрэглэгчид болон эрхийн түвшний тойм.</p></div></div>
+          <section class="panel"><div class="table-wrap"><table><thead><tr><th>ХЭРЭГЛЭГЧ</th><th>И-МЭЙЛ</th><th>ТӨРӨЛ</th><th>БАЙГУУЛЛАГА</th><th>ТӨЛӨВ</th><th></th></tr></thead><tbody id="usersRows"></tbody></table></div></section>
+        </section>
+
+        <!-- Settings -->
+        <section class="page" data-page="settings" hidden>
+          <div class="page-head"><div><span class="eyebrow">АДМИН · СИСТЕМ</span><h1>Тохиргоо</h1><p>Лабораторийн хэрэглээний үндсэн дүрэм, мэдэгдэл болон таамаглалын тохиргоог удирдана.</p></div></div>
+          <section class="panel settings-panel"><form id="settingsForm" class="stack-form"><div class="form-grid-2"><label>Өгөлтийн стандарт хугацаа (цаг)<input type="number" name="default_loan_hours" min="1" max="168"></label><label>Цөөн үлдсэн гэж үзэх босго<input type="number" name="low_stock_threshold" min="0" max="99"></label><label>Таамаглалын хугацаа (өдөр)<input type="number" name="prediction_horizon_days" min="1" max="30"></label><label class="checkbox-field"><span>Мэдэгдэл идэвхтэй</span><input type="checkbox" name="notifications_enabled"></label></div><div class="settings-note"><b>Аюулгүй байдал</b><p>Нууц үг, session, эрхийн шалгалт сервер талд хийгдэнэ. Production deployment дээр HTTPS, PostgreSQL, backup/restore болон бодит email сэргээх үйлчилгээг холбоно.</p></div><p id="settingsMessage" class="form-success" role="status"></p><button class="primary-button" type="submit">Тохиргоо хадгалах</button></form></section>
+        </section>
+
+        <!-- Profile -->
+        <section class="page" data-page="profile" hidden>
+          <div class="page-head"><div><span class="eyebrow">МИНИЙ БҮРТГЭЛ</span><h1>Профайл</h1><p>Таны нэр, байгууллага болон хэрэглэгчийн эрх.</p></div></div>
+          <div class="profile-grid"><section class="panel profile-card"><div class="profile-hero"><span id="profileAvatar" class="avatar huge">L</span><div><h2 id="profileName">LabSmart</h2><span id="profileRole" class="pill status-info">Оюутан</span></div></div><div id="profileFacts" class="facts-list"></div></section><section class="panel"><div class="panel-head"><div><h2>Мэдээллээ шинэчлэх</h2><p>Энд оруулсан нэр dashboard дээр харагдана.</p></div></div><form id="profileForm" class="stack-form"><div class="form-grid-2"><label>Овог<input name="last_name" required></label><label>Нэр<input name="first_name" required></label></div><label>Байгууллага / лабораторийн нэр<input name="organization" required></label><button class="primary-button" type="submit">Мэдээлэл хадгалах</button><p id="profileMessage" class="form-success" role="status"></p></form></section></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- MODALS -->
+  <dialog id="publicCatalog" class="modal large-modal"><div class="modal-head"><div><span class="eyebrow">НЭЭЛТТЭЙ КАТАЛОГ</span><h2>Төхөөрөмжүүд</h2><p>Нэвтрэхгүйгээр боломжтой төхөөрөмжийн ерөнхий мэдээллийг хараарай.</p></div><button class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><div class="catalog-search"><div class="search-box"><span>⌕</span><input id="publicSearch" placeholder="Төхөөрөмж хайх..."></div></div><div id="publicEquipmentGrid" class="public-equipment-grid"></div></dialog>
+
+  <dialog id="forgotDialog" class="modal"><form id="forgotForm" class="stack-form"><div class="modal-head"><div><span class="eyebrow">НУУЦ ҮГ</span><h2>Нууц үгээ сэргээх</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><label>И-мэйл<input name="email" type="email" required placeholder="you@example.com"></label><p class="helper">Сургалтын локал хувилбарт имэйл хүргэлт холбогдоогүй тул хүсэлтийг админд дамжуулсан төлөвөөр бүртгэнэ.</p><p id="forgotMessage" class="form-success" role="status"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Болих</button><button class="primary-button" type="submit">Сэргээх хүсэлт илгээх</button></div></form></dialog>
+
+  <dialog id="onboardingDialog" class="modal onboarding-modal"><div class="onboarding-stepper"><span class="active"></span><span></span><span></span><span></span></div><div class="onboarding-icon">L</div><span class="eyebrow">ТҮРХЭН ТАНИЛЦЪЯ</span><h2 id="onboardingTitle">LabSmart гэж юу вэ?</h2><p id="onboardingText">Лабораторийн төхөөрөмжөө олох, авах, буцаах болон хэрэгцээгээ төлөвлөхөд тусална.</p><div class="onboarding-actions"><button class="secondary-button" data-skip-onboarding>Алгасах</button><button class="primary-button" data-next-onboarding>Эхлэх →</button></div></dialog>
+
+  <dialog id="requestDialog" class="modal"><form id="requestForm"><div class="modal-head"><div><span class="eyebrow">ТӨХӨӨРӨМЖИЙН ХҮСЭЛТ</span><h2>Хүсэлт гаргах</h2><p>Хичээлийн session болон авах төхөөрөмжийн тоог оруулна уу.</p></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><label>Хичээл<select name="session_id" id="requestSession" required></select></label><label>Төхөөрөмж<select name="equipment_name" id="requestEquipmentName" required></select></label><label>Тоо хэмжээ<input name="requested_qty" type="number" min="1" max="500" value="1" required></label><p class="helper">Хүсэлтийг багш эсвэл лабораторийн ажилтан баталсны дараа QR-аар авах боломжтой.</p><p id="requestError" class="form-error"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Цуцлах</button><button class="primary-button" type="submit"><span class="button-label">Хүсэлт илгээх</span><span class="button-spinner" hidden></span></button></div></form></dialog>
+
+  <dialog id="requestDecisionDialog" class="modal"><form id="requestDecisionForm"><input type="hidden" name="request_id"><input type="hidden" name="status"><div class="modal-head"><div><span class="eyebrow">ХҮСЭЛТИЙН ШИЙДВЭР</span><h2 id="requestDecisionTitle">Хүсэлтийг батлах</h2><p id="requestDecisionSubtitle">Хүсэлтийн хэмжээг шалгаад шийдвэрээ баталгаажуулна уу.</p></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><div id="requestDecisionFacts" class="compact-facts"></div><label id="approvedQtyField">Батлах тоо хэмжээ<input name="approved_qty" type="number" min="1" max="500" value="1"></label><label id="rejectionReasonField" hidden>Татгалзах шалтгаан<textarea name="reason" rows="4" maxlength="300" placeholder="Жишээ: Одоогоор тухайн интервалд нөөц хүрэлцэхгүй байна."></textarea></label><p id="requestDecisionError" class="form-error"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Цуцлах</button><button id="requestDecisionSubmit" class="primary-button" type="submit"><span class="button-label">Батлах</span><span class="button-spinner" hidden></span></button></div></form></dialog>
+
+  <dialog id="maintenanceCompleteDialog" class="modal"><form id="maintenanceCompleteForm"><input type="hidden" name="id"><div class="modal-head"><div><span class="eyebrow">ЗАСВАР ҮЙЛЧИЛГЭЭ</span><h2>Засвар дуусгах</h2><p id="maintenanceCompleteName">Ажлын үр дүнг бүртгээд төхөөрөмжийг ашиглахад бэлэн болгоно.</p></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><label>Засварын үр дүн<textarea name="outcome" required maxlength="400" rows="4" placeholder="Жишээ: Холболтыг шалгаж, гэмтсэн кабелийг сольсон."></textarea></label><p id="maintenanceCompleteError" class="form-error"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Болих</button><button class="primary-button" type="submit"><span class="button-label">Засвар дуусгах</span><span class="button-spinner" hidden></span></button></div></form></dialog>
+
+  <dialog id="equipmentDialog" class="modal large-modal"><form id="equipmentForm"><div class="modal-head"><div><span class="eyebrow">ТӨХӨӨРӨМЖИЙН БҮРТГЭЛ</span><h2 id="equipmentDialogTitle">Төхөөрөмж нэмэх</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><input type="hidden" name="id"><div class="form-grid-2"><label>Төхөөрөмжийн дугаар *<input name="code" required maxlength="120" placeholder="LAB-007"></label><label>Төхөөрөмжийн нэр *<input name="name" required maxlength="120" placeholder="ESP32"></label><label>Ангилал *<input name="category" required maxlength="120" list="categories" placeholder="Электроник"></label><label>Байршил *<input name="location" required maxlength="120" list="locations" placeholder="Лаборатори 201"></label><label>Серийн дугаар<input name="serial" maxlength="120"></label><label>Төлөв<select name="status"><option value="available">Боломжтой</option><option value="in_use">Ашиглаж байна</option><option value="maintenance">Засварт</option><option value="damaged">Гэмтсэн</option><option value="lost">Алдагдсан</option><option value="retired">Идэвхгүй</option></select></label></div><label>Тайлбар<textarea name="notes" rows="4" maxlength="1000" placeholder="Нэмэлт тайлбар..." ></textarea></label><p id="equipmentError" class="form-error"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Цуцлах</button><button id="equipmentSave" class="primary-button" type="submit"><span class="button-label">Хадгалах</span><span class="button-spinner" hidden></span></button></div></form></dialog>
+
+  <dialog id="equipmentDetailDialog" class="modal large-modal"><div class="modal-head"><div><span class="eyebrow">ДЭЛГЭРЭНГҮЙ</span><h2 id="detailTitle">Төхөөрөмж</h2><p id="detailSubtitle"></p></div><button class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><div class="detail-hero"><div id="detailDeviceIcon" class="device-icon-large">▦</div><div><div id="detailStatus"></div><div id="detailPrimaryFact"></div></div></div><div class="detail-actions" id="detailActions"></div><div id="detailFacts" class="facts-grid"></div><section class="advanced-section"><button class="advanced-toggle" data-toggle-advanced="equipmentAdvanced"><span>Нэмэлт мэдээлэл</span><b>＋</b></button><div id="equipmentAdvanced" class="advanced-content" hidden><div class="advanced-grid" id="advancedFacts"></div><h3>Өмнөх бүртгэлийн түүх</h3><div id="equipmentHistory" class="history-list"></div></div></section></dialog>
+
+  <dialog id="borrowDialog" class="modal"><form id="borrowForm"><div class="modal-head"><div><span class="eyebrow">QR / ТӨХӨӨРӨМЖ</span><h2>Төхөөрөмж авах</h2><p id="borrowEquipmentName"></p></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><div id="borrowFacts" class="compact-facts"></div><label>Буцаах хугацаа<input id="dueAt" name="due_at" type="datetime-local" required></label><p class="helper">Бодит олголтын дараа төхөөрөмжийн төлөв “Ашиглаж байна” болж, түүхэнд бүртгэгдэнэ.</p><p id="borrowError" class="form-error"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Цуцлах</button><button class="primary-button" type="submit">Баталгаажуулах</button></div></form></dialog>
+
+  <dialog id="returnDialog" class="modal"><form id="returnForm"><input type="hidden" name="loan_id"><div class="modal-head"><div><span class="eyebrow">QR / БУЦААЛТ</span><h2>Төхөөрөмж буцаах</h2><p id="returnEquipmentName"></p></div><button type="button" class="icon-button" data-close-dialog aria-label="Хаах">×</button></div><label>Буцаах үеийн нөхцөл<select name="return_condition"><option>Сайн</option><option>Жижиг зураастай</option><option>Гэмтсэн</option><option>Эвдэрсэн, засвар шаардлагатай</option></select></label><p id="returnError" class="form-error"></p><div class="modal-actions"><button type="button" class="secondary-button" data-close-dialog>Цуцлах</button><button class="primary-button" type="submit">Буцаалт батлах</button></div></form></dialog>
+
+  <dialog id="toastDialog" class="toast-dialog" aria-live="polite"><div id="toastIcon" class="toast-icon">✓</div><div><b id="toastTitle">Амжилттай</b><p id="toastMessage"></p></div></dialog>
+
+  <datalist id="categories"></datalist><datalist id="locations"></datalist>
+</body>
+</html>

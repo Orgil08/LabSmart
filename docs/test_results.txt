@@ -1,0 +1,15 @@
+test_01_anonymous_blocked (__main__.SystemTest.test_01_anonymous_blocked) ... ok
+test_02_bad_login (__main__.SystemTest.test_02_bad_login) ... ok
+test_03_viewer_blocked (__main__.SystemTest.test_03_viewer_blocked) ... ok
+test_04_csrf (__main__.SystemTest.test_04_csrf) ... ok
+test_05_crud_search_audit (__main__.SystemTest.test_05_crud_search_audit) ... ok
+test_06_duplicate (__main__.SystemTest.test_06_duplicate) ... ok
+test_07_validation (__main__.SystemTest.test_07_validation) ... ok
+test_08_logout (__main__.SystemTest.test_08_logout) ... ok
+test_09_sql_input (__main__.SystemTest.test_09_sql_input) ... ok
+test_10_restart_persistence (__main__.SystemTest.test_10_restart_persistence) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.846s
+
+OK

@@ -1,0 +1,1 @@
+13 integration tests passed: authentication, permissions, equipment create/edit/search/audit, registration validation, case-insensitive duplicate names, persistence, and origin rejection. Browser visual verification not performed.
